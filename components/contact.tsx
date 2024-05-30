@@ -24,7 +24,7 @@ const Contact: FC = () => {
   const { errors, isSubmitting, isSubmitSuccessful } = formState;
 
   function onSubmit(data: FormData) {
-        sendEmail(data);  
+        sendEmail(data);
   }
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -134,10 +134,10 @@ const Contact: FC = () => {
           <button
             type="submit"
             className="btn-blue dark:hover:shadow-bleu"
-          >            
+          >
             Envoyez message
           </button>
-          
+
         </form>
       </div>
     </section>
