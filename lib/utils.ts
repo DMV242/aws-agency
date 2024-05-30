@@ -4,11 +4,12 @@ import { FormData } from '@/components/contact';
 export default function sendEmail(data: FormData) {
 
     const response = fetch('api/email', {
-        method: 'POST',
+        method: 'GET',
         headers: {
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'data': JSON.stringify(data)
         },
-        body: JSON.stringify(data),
+
       })
         .then((res) => res.json())
         .then((response) => {
