@@ -10,7 +10,7 @@ interface RequestData {
   message: string;
 }
 
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
     const res: RequestData = JSON.parse(request.headers.get('data') || '{}');
     const { email = '', nom = '', phone = '', sujet = '', message = '' } = res;
